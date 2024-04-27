@@ -24,7 +24,7 @@ const cgpaConverter = () => {
     const convertedCGPA = currentGPA / factor;
 
     // Display the converted CGPA to the user
-    document.getElementById('showConvertedCGPA').innerHTML = `<strong><big><big>${convertedCGPA.toFixed(2)}</big></big></strong>`;
+    document.getElementById('showConvertedCGPA').innerHTML = `<big><big>${convertedCGPA.toFixed(2)}</big></big>`;
 }
 
 const resetForm = () => {
