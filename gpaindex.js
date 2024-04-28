@@ -387,3 +387,4 @@ document.getElementById('crd10').addEventListener('keydown', handleEnterKeyPress
 
 // Add global event listener for Escape key press
 document.addEventListener('keydown', handleEscapeKeyPress);
+document.addEventListener('keydown', handleEnterKeyPress);
