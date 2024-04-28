@@ -296,7 +296,12 @@ const calc = () => {
     }
 
     let gpa = (gradeScr / totalCred);
-    document.getElementById('showGPA').innerHTML = `<big><big>${gpa.toFixed(2)}</big></big>`;
+    if (isNaN(gpa)) {
+        document.getElementById('showGPA').innerHTML = `<big><big>Please Choose Grade(s)</big></big>`;
+    }
+    else {
+        document.getElementById('showGPA').innerHTML = `<big><big>${gpa.toFixed(2)}</big></big>`;
+    }
     document.getElementById('showCred').innerHTML = `<big><big>${totalCred}</big></big>`;
 }
 
@@ -336,7 +341,11 @@ const resetForm = () => {
 
 // Function to handle keydown event on input fields
 function handleEnterKeyPress(event) {
-    if (event.keyCode === 13) {
+    if (event.keyCode === 13) {                 //Enter Key code is 13
+        if (event.target.id.startsWith('sub')) {
+            return; // If it's an 'sub' input field, let the default action happen
+        }
+
         event.preventDefault(); // Prevent default action of Enter key
         calc(); // Call calc function to calculate
 
