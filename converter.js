@@ -37,3 +37,24 @@ const resetForm = () => {
     document.getElementById('showConvertedCGPA').innerHTML = '';
 }
 
+// Function to handle keydown event on input fields
+function handleEnterKeyPress(event) {
+    if (event.keyCode === 13) {
+        event.preventDefault(); // Prevent default action of Enter key
+        cgpaConverter(); // Call calc function to calculate
+    }
+}
+
+// Function to handle keydown event globally for Escape key
+function handleEscapeKeyPress(event) {
+    if (event.keyCode === 27) {
+        event.preventDefault();
+        resetForm();
+
+    }
+}
+
+
+// Add global event listener for Escape key press
+document.addEventListener('keydown', handleEscapeKeyPress);
+document.addEventListener('keydown', handleEnterKeyPress);

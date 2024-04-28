@@ -109,3 +109,37 @@ const resetForm = () => {
     document.getElementById('showCGPA').innerHTML = '';
     document.getElementById('showCred').innerHTML = '';
 }
+
+
+// Function to handle keydown event on input fields
+function handleEnterKeyPress(event) {
+    if (event.keyCode === 13) {
+        event.preventDefault(); // Prevent default action of Enter key
+        cgpaCalculator(); // Call calc function to calculate
+
+        // Scroll to the bottom of the screen
+        window.scrollTo({
+            top: document.body.scrollHeight - window.innerHeight,
+            behavior: 'smooth' // Add smooth scrolling behavior if desired
+        });
+    }
+}
+
+// Function to handle keydown event globally for Escape key
+function handleEscapeKeyPress(event) {
+    if (event.keyCode === 27) {
+        event.preventDefault();
+        resetForm();
+
+        // Scroll to the top of the screen
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth' // Add smooth scrolling behavior if desired
+        });
+    }
+}
+
+
+// Add global event listener for Escape key press
+document.addEventListener('keydown', handleEscapeKeyPress);
+document.addEventListener('keydown', handleEnterKeyPress);
