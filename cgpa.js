@@ -114,6 +114,9 @@ const resetForm = () => {
 // Function to handle keydown event on input fields
 function handleEnterKeyPress(event) {
     if (event.keyCode === 13) {
+        if (event.target.closest('nav')) { // Check if the target element is within <nav>
+            return; //return if true
+        }
         event.preventDefault(); // Prevent default action of Enter key
         cgpaCalculator(); // Call calc function to calculate
 

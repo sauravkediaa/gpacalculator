@@ -324,10 +324,10 @@ const resetForm = () => {
     crd4 = document.getElementById('crd4').value = '';
     crd5 = document.getElementById('crd5').value = '';
     crd6 = document.getElementById('crd6').value = '';
-    document.getElementById('crd7').value = '';
-    document.getElementById('crd8').value = '';
-    document.getElementById('crd9').value = '';
-    document.getElementById('crd10').value = '';
+    crd7 = document.getElementById('crd7').value = '';
+    crd8 = document.getElementById('crd8').value = '';
+    crd9 = document.getElementById('crd9').value = '';
+    crd10 = document.getElementById('crd10').value = '';
 
     // Clear the displayed converted CGPA
     document.getElementById('showGPA').innerHTML = '';
@@ -344,6 +344,9 @@ function handleEnterKeyPress(event) {
     if (event.keyCode === 13) {                 //Enter Key code is 13
         if (event.target.id.startsWith('sub')) {
             return; // If it's an 'sub' input field, let the default action happen
+        }
+        if (event.target.closest('nav')) { // Check if the target element is within <nav>
+            return; //return if true
         }
 
         event.preventDefault(); // Prevent default action of Enter key
