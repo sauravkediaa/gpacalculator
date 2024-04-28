@@ -325,6 +325,6 @@ const resetForm = () => {
     document.getElementById('crd10').value = '';
 
     // Clear the displayed converted CGPA
-    document.getElementById('showCGPA').innerHTML = '';
+    document.getElementById('showGPA').innerHTML = '';
     document.getElementById('showCred').innerHTML = '';
 }
