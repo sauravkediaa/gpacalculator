@@ -79,8 +79,8 @@ const cgpaCalculator = () => {
 
 
     let cgpa = product / totalCred;
-    document.getElementById('showCGPA').innerHTML = `<big><big>${cgpa.toFixed(2)}</big></big>`;
-    document.getElementById('showCred').innerHTML = `<big><big>${totalCred}</big></big>`;
+    document.getElementById('showCGPA').innerHTML = `${cgpa.toFixed(2)}`;
+    document.getElementById('showCred').innerHTML = `${totalCred}`;
 }
 
 
