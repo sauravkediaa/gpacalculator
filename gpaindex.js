@@ -303,6 +303,12 @@ const calc = () => {
         document.getElementById('showGPA').innerHTML = `<big><big>${gpa.toFixed(2)}</big></big>`;
     }
     document.getElementById('showCred').innerHTML = `<big><big>${totalCred}</big></big>`;
+
+    // Scroll to the bottom of the screen
+    window.scrollTo({
+        top: document.body.scrollHeight - window.innerHeight,
+        behavior: 'smooth' // Add smooth scrolling behavior if desired
+    });
 }
 
 const resetForm = () => {
@@ -332,6 +338,8 @@ const resetForm = () => {
     // Clear the displayed converted CGPA
     document.getElementById('showGPA').innerHTML = '';
     document.getElementById('showCred').innerHTML = '';
+
+    //Scrolling to top of the screen
     window.scrollTo({
         top: 0,
         behavior: 'smooth' // Add smooth scrolling behavior if desired
@@ -352,11 +360,6 @@ function handleEnterKeyPress(event) {
         event.preventDefault(); // Prevent default action of Enter key
         calc(); // Call calc function to calculate
 
-        // Scroll to the bottom of the screen
-        window.scrollTo({
-            top: document.body.scrollHeight - window.innerHeight,
-            behavior: 'smooth' // Add smooth scrolling behavior if desired
-        });
     }
 }
 
@@ -365,12 +368,6 @@ function handleEscapeKeyPress(event) {
     if (event.keyCode === 27) {
         event.preventDefault();
         resetForm();
-
-        // Scroll to the top of the screen
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth' // Add smooth scrolling behavior if desired
-        });
     }
 }
 
@@ -378,26 +375,3 @@ function handleEscapeKeyPress(event) {
 // Add global event listener for Escape key press
 document.addEventListener('keydown', handleEscapeKeyPress);
 document.addEventListener('keydown', handleEnterKeyPress);
-
-// Add event listeners to input fields to trigger calc function on Enter key press
-// document.getElementById('sub1').addEventListener('keydown', handleEnterKeyPress);
-// document.getElementById('sub2').addEventListener('keydown', handleEnterKeyPress);
-// document.getElementById('sub3').addEventListener('keydown', handleEnterKeyPress);
-// document.getElementById('sub4').addEventListener('keydown', handleEnterKeyPress);
-// document.getElementById('sub5').addEventListener('keydown', handleEnterKeyPress);
-// document.getElementById('sub6').addEventListener('keydown', handleEnterKeyPress);
-// document.getElementById('sub7').addEventListener('keydown', handleEnterKeyPress);
-// document.getElementById('sub8').addEventListener('keydown', handleEnterKeyPress);
-// document.getElementById('sub9').addEventListener('keydown', handleEnterKeyPress);
-// document.getElementById('sub10').addEventListener('keydown', handleEnterKeyPress);
-
-// document.getElementById('crd1').addEventListener('keydown', handleEnterKeyPress);
-// document.getElementById('crd2').addEventListener('keydown', handleEnterKeyPress);
-// document.getElementById('crd3').addEventListener('keydown', handleEnterKeyPress);
-// document.getElementById('crd4').addEventListener('keydown', handleEnterKeyPress);
-// document.getElementById('crd5').addEventListener('keydown', handleEnterKeyPress);
-// document.getElementById('crd6').addEventListener('keydown', handleEnterKeyPress);
-// document.getElementById('crd7').addEventListener('keydown', handleEnterKeyPress);
-// document.getElementById('crd8').addEventListener('keydown', handleEnterKeyPress);
-// document.getElementById('crd9').addEventListener('keydown', handleEnterKeyPress);
-// document.getElementById('crd10').addEventListener('keydown', handleEnterKeyPress);
