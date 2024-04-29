@@ -79,7 +79,13 @@ const cgpaCalculator = () => {
 
 
     let cgpa = product / totalCred;
-    document.getElementById('showCGPA').innerHTML = `${cgpa.toFixed(2)}`;
+
+    if (isNaN(cgpa)) {
+        document.getElementById('showGPA').innerHTML = `<big><big>Please Enter both, Credit(s) and GPA(s)</big></big>`;
+    }
+    else {
+        document.getElementById('showCGPA').innerHTML = `${cgpa.toFixed(2)}`;
+    }
     document.getElementById('showCred').innerHTML = `${totalCred}`;
 }
 
