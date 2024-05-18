@@ -32,7 +32,6 @@ li {
   font-size: 20px;
 }
 
-/* Navbar css properties */
 li a {
   text-transform: uppercase;
   font-weight: 900;
@@ -54,93 +53,4 @@ li a.two:hover {
 
 #active {
   color: #011614;
-}
-
-
-/*-------------chat gpt media------------------*/
-
-/* Media query for typical smartphones */
-@media (max-width: 575.98px) {
-
-}
-
-/* Media query for larger smartphones */
-@media (min-width: 576px) and (max-width: 768px) {
-
-}
-
-/* Media query for landscape orientation on smartphones */
-@media (max-width: 991.98px) and (orientation: landscape) {
-  
-}
-
-/*---------------------------------------------------------------*/
-
-
-/*-------------------------for desktop-------------------------*/
-@media (min-width: 769px) {
-
-  
-  /* CSS rules for desktop */
-  .mobile-only {
-      display: none;
-  }
-
-}
-
-
-
-
-
-/*---------------------For mobile screens------------------------*/
-/* Mobile styles */
-@media (max-width: 768px) {
-
-  body{
-    font-size: 1.2rem;
-  }
-
-   /* Custom hamburger icon */
-   .navbar-toggler .navbar-toggler-icon {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 24px;
-    height: 24px;
-  }
-
-  .navbar-toggler .icon-bar {
-    width: 24px;
-    height: 2px;
-    background-color: white;
-    display: block;
-  }
-
-  /* Navbar css properties */
-  .navbar-nav .nav-link {
-  text-transform:capitalize;
-  font-weight: 500;
-  font-family: 'Times New Roman', Times, serif;
-  display: block;
-  color: white;
-  text-align: left;
-  /* padding: 14px 12px; */
-  text-decoration: none;
-}
-  .navbar-brand{
-  text-transform:capitalize;
-  font-weight: 500;
-  font-family: 'Times New Roman', Times, serif;
-  display: block;
-  color: white;
-  text-align: left;
-  /* padding: 14px 12px; */
-  text-decoration: none;
-}
-  
-  
-  /* CSS rules for mobile */
-  .desktop-only {
-      display: none;
-  }
 }
