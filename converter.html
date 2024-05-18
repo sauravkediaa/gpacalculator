@@ -239,17 +239,33 @@
           <a class="nav-link" href="./">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./cgpa">CGPA Calculator</a>
+          <a class="nav-link" href="./cgpa.html">CGPA Calculator</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./gpa">GPA Calculator</a>
+          <a class="nav-link" href="./gpa.html">GPA Calculator</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./converter">Scale Converter</a>
+          <a class="nav-link" href="./converter.html">Scale Converter</a>
         </li>
       </ul>
     </div>
   </nav>
+
+
+  <div class="container">
+    <div class="row justify-content-center align-items-center">
+      <div class="col-md-6 mt-5 col-sm-12">
+        <input type="number" class="input-field" placeholder="Current Scale (e.g., 10)" id="currentScale">
+        <input type="number" class="input-field" placeholder="New Scale (e.g., 4)" id="newScale">
+        <input type="number" class="input-field" placeholder="Current GPA/CGPA (e.g., 9.2)" id="currentGPA">
+        
+        <button class="btn btn-primary" onclick="cgpaConverter()">Calculate</button>
+        <div class="result mt-4">
+          <h4 class="text-center" style="color: white;">New GPA: <span id="newGPA"></span></h4>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 </body>
 

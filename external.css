@@ -98,6 +98,7 @@ li a.two:hover {
 
   body{
     font-size: 1.2rem;
+    text-align: center;
   }
 
    /* Custom hamburger icon */
@@ -138,6 +139,14 @@ li a.two:hover {
   text-decoration: none;
 }
   
+
+
+.container {
+  height: 100vh;
+}
+.input-field {
+  max-width: 100%;
+}
   
   /* CSS rules for mobile */
   .desktop-only {
