@@ -12,21 +12,6 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" type="text/css" href="external.css" />
 
-
-
-  <script>
-    $(document).ready(function () {
-      // Event listener for Enter key press in input fields
-      $("input[type='text']").keypress(function (event) {
-        if (event.which === 13) { // 13 is the Enter key code
-          event.preventDefault(); // Prevent the default behavior of Enter key
-          $("#Calculate").click(); // Trigger click event of the Calculate button
-        }
-      });
-    });
-
-  </script>
-
   <style>
     input[type=number]::-webkit-inner-spin-button,
     input[type=number]::-webkit-outer-spin-button {
