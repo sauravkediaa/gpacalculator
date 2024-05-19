@@ -376,6 +376,72 @@
           </ul>
         </div>
       </nav>
+
+      <div class="container">
+        <div class="table-container">
+            <table class="table table-borderless">
+                <thead>
+                    <tr>
+                        <th>Semester</th>
+                        <th>Credits</th>
+                        <th>GPA</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <tr>
+                        <td>Semester 1</td>
+                        <td><input type="number" placeholder="Credit 1" id="crd1"></td>
+                        <td><input type="number" placeholder="GPA 1" id="gpa1"></td>
+                    </tr>
+                    <tr>
+                        <td>Semester 2</td>
+                        <td><input type="number" placeholder="Credit 2" id="crd2"></td>
+                        <td><input type="number" placeholder="GPA 2" id="gpa2"></td>
+                    </tr>
+                    <tr>
+                        <td>Semester 3</td>
+                        <td><input type="number" placeholder="Credit 3" id="crd3"></td>
+                        <td><input type="number" placeholder="GPA 3" id="gpa3"></td>
+                    </tr>
+                    <tr>
+                        <td>Semester 4</td>
+                        <td><input type="number" placeholder="Credit 4" id="crd4"></td>
+                        <td><input type="number" placeholder="GPA 4" id="gpa4"></td>
+                    </tr>
+                    <tr>
+                        <td>Semester 5</td>
+                        <td><input type="number" placeholder="Credit 5" id="crd5"></td>
+                        <td><input type="number" placeholder="GPA 5" id="gpa5"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="buttons-container">
+                <input type="button" onClick="cgpaCalculator()" value="Calculate">
+                <input type="button" onClick="resetForm()" value="Reset">
+                <input type="button" onClick="addRow()" value="Add">
+            </div>
+            <div class="results-container mt-3 ml-5">
+                <p><b>CGPA:</b> <span id="showCGPA"></span></p>
+                <p><b>Total Credits:</b> <span id="showCred"></span></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+              function addRow() {
+            const tableBody = document.getElementById('tableBody');
+            const rowCount = tableBody.rows.length + 1;
+            const newRow = `
+                <tr>
+                    <td>Semester ${rowCount}</td>
+                    <td><input type="number" placeholder="Credit ${rowCount}" id="crd${rowCount}"></td>
+                    <td><input type="number" placeholder="GPA ${rowCount}" id="gpa${rowCount}"></td>
+                </tr>
+            `;
+            tableBody.insertAdjacentHTML('beforeend', newRow);
+        }
+    </script>
+
     </div>
   </body>
 </html>

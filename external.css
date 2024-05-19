@@ -99,7 +99,7 @@ li a.two:hover {
   body{
     font-size: 1.2rem;
     text-align: center;
-    overflow: hidden;
+    /* overflow: hidden; */
   }
 
    /* Custom hamburger icon */
@@ -160,4 +160,26 @@ h1{
   .desktop-only {
       display: none;
   }
+
+  .buttons-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+#tableBody{
+  color: white;
+  font-size: medium;
+}
+thead{
+  color: white;
+}
+#tableBody td{
+  vertical-align: middle;
+}
+.results-container{
+  color: white;
+  text-align: left;
+}
 }
