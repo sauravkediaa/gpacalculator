@@ -128,6 +128,46 @@ const resetForm = () => {
     });
 }
 
+function addRow() {
+    const tableBody = document.getElementById('tableBody');
+    const rowCount = tableBody.rows.length + 1;
+    const newRow = document.createElement('tr');
+    newRow.innerHTML = `
+  <td>Semester ${rowCount}</td>
+  <td><input type="number" placeholder="Credit ${rowCount}" /></td>
+  <td><input type="number" placeholder="GPA ${rowCount}" /></td>
+  <td><button class="btn-delete" onclick="deleteRow(this)">Delete</button></td>
+`;
+    tableBody.appendChild(newRow);
+}
+
+function deleteRow(button) {
+    const row = button.closest('tr');
+    row.remove();
+}
+
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+
+function toggleScrollButton() {
+    const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+    if (window.scrollY > 50) {
+        scrollToTopBtn.style.opacity = '1';
+        scrollToTopBtn.style.visibility = 'visible';
+    } else {
+        scrollToTopBtn.style.opacity = '0';
+        scrollToTopBtn.style.visibility = 'hidden';
+    }
+}
+
+window.addEventListener('scroll', toggleScrollButton);
+
+
+
 
 // Function to handle keydown event on input fields
 function handleEnterKeyPress(event) {

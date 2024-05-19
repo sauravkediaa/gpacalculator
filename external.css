@@ -36,7 +36,7 @@ li {
 li a {
   text-transform: uppercase;
   font-weight: 900;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
   display: block;
   color: white;
   text-align: center;
@@ -56,54 +56,100 @@ li a.two:hover {
   color: #011614;
 }
 
-
 /*-------------chat gpt media------------------*/
 
 /* Media query for typical smartphones */
 @media (max-width: 575.98px) {
-
 }
 
 /* Media query for larger smartphones */
 @media (min-width: 576px) and (max-width: 768px) {
-
 }
 
 /* Media query for landscape orientation on smartphones */
 @media (max-width: 991.98px) and (orientation: landscape) {
-  
 }
 
 /*---------------------------------------------------------------*/
 
-
 /*-------------------------for desktop-------------------------*/
 @media (min-width: 769px) {
-
-  
   /* CSS rules for desktop */
   .mobile-only {
-      display: none;
+    display: none;
   }
 
+  .scroll-to-top-button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(20, 20, 20);
+    border: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 0px 4px rgba(180, 160, 255, 0.253);
+    cursor: pointer;
+    transition-duration: 0.3s;
+    overflow: hidden;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+  }
+
+  .scroll-to-top-icon {
+    width: 12px;
+    transition-duration: 0.3s;
+  }
+
+  .scroll-to-top-icon path {
+    fill: white;
+  }
+
+  .scroll-to-top-button:hover {
+    width: 140px;
+    border-radius: 50px;
+    transition-duration: 0.3s;
+    background-color: #17a2b8;
+    align-items: center;
+  }
+
+  .scroll-to-top-button:hover .scroll-to-top-icon {
+    transition-duration: 0.3s;
+    transform: translateY(-200%);
+  }
+
+  .scroll-to-top-button::before {
+    position: absolute;
+    bottom: -20px;
+    content: "Back to Top";
+    color: white;
+    font-size: 0px;
+  }
+
+  .scroll-to-top-button:hover::before {
+    font-size: 13px;
+    opacity: 1;
+    bottom: unset;
+    transition-duration: 0.3s;
+  }
 }
-
-
-
-
 
 /*---------------------For mobile screens------------------------*/
 /* Mobile styles */
 @media (max-width: 768px) {
-
-  body{
+  body {
     font-size: 1.2rem;
     text-align: center;
     /* overflow: hidden; */
   }
 
-   /* Custom hamburger icon */
-   .navbar-toggler .navbar-toggler-icon {
+  /* Custom hamburger icon */
+  .navbar-toggler .navbar-toggler-icon {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -120,45 +166,42 @@ li a.two:hover {
 
   /* Navbar css properties */
   .navbar-nav .nav-link {
-  text-transform: uppercase;
-  font-weight: 500;
-  font-family: 'Times New Roman', Times, serif;
-  display: block;
-  color: white;
-  text-align: left;
-  /* padding: 14px 12px; */
-  text-decoration: none;
-}
-  .navbar-brand{
-  text-transform: uppercase;
-  font-weight: 650;
-  font-family: 'Times New Roman', Times, serif;
-  display: block;
-  color: black;
-  text-align: left;
-  /* padding: 14px 12px; */
-  text-decoration: none;
-}
-  
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: "Times New Roman", Times, serif;
+    display: block;
+    color: white;
+    text-align: left;
+    /* padding: 14px 12px; */
+    text-decoration: none;
+  }
+  .navbar-brand {
+    text-transform: uppercase;
+    font-weight: 650;
+    font-family: "Times New Roman", Times, serif;
+    display: block;
+    color: black;
+    text-align: left;
+    /* padding: 14px 12px; */
+    text-decoration: none;
+  }
 
+  .container {
+    height: 100vh;
+  }
+  .input-field {
+    max-width: 100%;
+  }
 
-.container {
-  height: 100vh;
-}
-.input-field {
-  max-width: 100%;
-}
+  h1 {
+    color: white;
+    font-size: 5rem;
+    vertical-align: middle;
+  }
 
-h1{
-  color: white;
-  font-size: 5rem;
-  vertical-align: middle;
-
-}
-  
   /* CSS rules for mobile */
   .desktop-only {
-      display: none;
+    display: none;
   }
 
   .buttons-container {
@@ -166,20 +209,20 @@ h1{
     justify-content: space-between;
     gap: 10px;
     margin-top: 10px;
-}
+  }
 
-#tableBody{
-  color: white;
-  font-size: medium;
-}
-thead{
-  color: white;
-}
-#tableBody td{
-  vertical-align: middle;
-}
-.results-container{
-  color: white;
-  text-align: left;
-}
+  #tableBody {
+    color: white;
+    font-size: medium;
+  }
+  thead {
+    color: white;
+  }
+  #tableBody td {
+    vertical-align: middle;
+  }
+  .results-container {
+    color: white;
+    text-align: left;
+  }
 }
