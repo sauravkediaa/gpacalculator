@@ -101,9 +101,10 @@ li a.two:hover {
     transition: opacity 0.3s, visibility 0.3s;
   }
 
+  /* Arrow returning back after hover removing */
   .scroll-to-top-icon {
     width: 12px;
-    transition-duration: 0.3s;
+    transition-duration: 0.4s;
   }
 
   .scroll-to-top-icon path {
@@ -117,9 +118,9 @@ li a.two:hover {
     background-color: #17a2b8;
     align-items: center;
   }
-
+  /* Transition motion on hovering */
   .scroll-to-top-button:hover .scroll-to-top-icon {
-    transition-duration: 0.3s;
+    transition-duration: 0.4s;
     transform: translateY(-200%);
   }
 
